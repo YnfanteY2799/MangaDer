@@ -6,13 +6,13 @@ import Settings from "./Settings/Settings";
 
 
 const homePageChildrends : RouteChildren[] = [
-  {path:"/Settings", Element: Settings()}
+  {path:"/Settings", Element: Settings  }
 ]
 
 
 const PagesList: RoutingObject[] = [
-  { path: "/", Element: Home(), childrens: homePageChildrends },
-  {path: "/Login", Element: Login()}
+  { path: "/", Element: Home, childrens: homePageChildrends },
+  {path: "/Login", Element: Login }
   
 ];
 

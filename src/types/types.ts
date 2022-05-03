@@ -2,13 +2,13 @@ import { ReactNode } from "react";
 
 export type RouteChildren = {
   path: string;
-  Element: ReactNode;
+  Element: Function;
 };
 
 export type RoutingObject = {
   path: string;
   childrens?: Array<RouteChildren>;
-  Element: ReactNode;
+  Element: Function;
 };
 
 export type LoginCreds = {

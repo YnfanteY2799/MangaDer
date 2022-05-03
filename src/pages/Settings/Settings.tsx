@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export default function Settings():ReactNode {
+export default function Settings(): JSX.Element {
 
 
 
