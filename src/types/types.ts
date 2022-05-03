@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 export type RouteChildren = {
   path: string;
   Element: Function;
+  include?: boolean;
 };
 
 export type RoutingObject = {

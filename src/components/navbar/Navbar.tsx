@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { NavbarPropTypes } from "../../types/types";
 import { useLocation } from "react-router-dom";
+import { HomeChildrends } from "../../pages/pages";
 // Types Import
 import { NavbarRoute } from "../../types/types";
 
@@ -9,10 +10,6 @@ export default function Navbar({
 }: NavbarPropTypes): JSX.Element {
   // Constants
   const brand: string = "MangaDer";
-  const navbarActions: Array<NavbarRoute> = [
-    { name: "Home", route: "/" },
-    { name: "Login", route: "/Login" },
-  ];
 
   // Hooks
   const { pathname } = useLocation();
@@ -22,7 +19,9 @@ export default function Navbar({
 
   return (
     <div className="dark">
+
       <nav className={`bg-white shadow dark:bg-gray-800`}>
+
         <div className="container px-6 py-3 mx-auto md:flex">
           <div className="flex items-center justify-between">
             <div>
@@ -53,15 +52,15 @@ export default function Navbar({
 
           <div className="w-full md:flex md:items-center md:justify-between">
             <div className="flex flex-col px-2 py-3 -mx-4 md:flex-row md:mx-0 md:py-0">
-              {navbarActions.map(({ name, route }, index) => (
+              {HomeChildrends.map(({ path, include }, index) => include === undefined && (
                 <Link
                   key={index}
-                  to={route}
+                  to={path}
                   className={
                     "px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2"
                   }
                 >
-                  {name}
+                  {path}
                 </Link>
               ))}
             </div>
@@ -90,6 +89,9 @@ export default function Navbar({
               />
             </div>
           </div>
+
+
+
           <div className="flex items-center mt-4 md:mt-0">
             <button
               className="hidden mx-4 text-gray-600 transition-colors duration-200 transform md:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none"
@@ -130,6 +132,8 @@ export default function Navbar({
             </button>
           </div>
         </div>
+
+
       </nav>
     </div>
   );

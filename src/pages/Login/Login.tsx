@@ -12,11 +12,10 @@ export default function Login(): JSX.Element {
   }
 
   return (
-    <div className="dark">
-      <Navbar isTransparent={true} />
+    <div>
       <div className="bg-white dark:bg-gray-900">
-        <div className="flex justify-center">
-          <div className="hidden bg-cover lg:block lg:w-2/3 LoginImage">
+        <div className="flex justify-center h-screen">
+          <div className="hidden bg-cover lg:block lg:w-2/3">
             <div className="flex items-center h-full px-20 bg-gray-900 bg-opacity-40">
               <div>
                 <h2 className="text-4xl font-bold text-white">Brand</h2>
@@ -43,7 +42,7 @@ export default function Login(): JSX.Element {
               </div>
 
               <div className="mt-8">
-                <form onSubmit={doLogin}>
+                <form>
                   <div>
                     <label
                       htmlFor="email"
@@ -57,8 +56,6 @@ export default function Login(): JSX.Element {
                       id="email"
                       placeholder="example@example.com"
                       className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
-                      // value={userName}
-                      // onChange={({ target: { value } }) => setUserName(value)}
                     />
                   </div>
 
@@ -84,16 +81,11 @@ export default function Login(): JSX.Element {
                       id="password"
                       placeholder="Your Password"
                       className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
-                      // value={passWord}
-                      // onChange={({ target: { value } }) => setPassWord(value)}
                     />
                   </div>
 
                   <div className="mt-6">
-                    <button
-                      onSubmit={doLogin}
-                      className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50"
-                    >
+                    <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                       Sign in
                     </button>
                   </div>
