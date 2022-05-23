@@ -33,11 +33,11 @@ export default function Login(): JSX.Element {
             <div className="flex-1">
               <div className="text-center">
                 <h2 className="text-4xl font-bold text-center text-gray-700 dark:text-white">
-                  Brand
+                  Mangader / Login
                 </h2>
 
                 <p className="mt-3 text-gray-500 dark:text-gray-300">
-                  Sign in to access your account
+                  Sign in to access your account and saved settings
                 </p>
               </div>
 
@@ -45,15 +45,17 @@ export default function Login(): JSX.Element {
                 <form>
                   <div>
                     <label
-                      htmlFor="email"
+                      htmlFor="username"
                       className="block mb-2 text-sm text-gray-600 dark:text-gray-200"
                     >
-                      Email Address
+                      Username
                     </label>
                     <input
-                      type="email"
-                      name="email"
-                      id="email"
+                      type="text"
+                      name="username"
+                      id="username"
+                      value={userName}
+                      onChange={({ target: { value } }) => setUserName(value)}
                       placeholder="example@example.com"
                       className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     />

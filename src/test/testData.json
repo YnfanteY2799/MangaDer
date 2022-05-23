@@ -1,0 +1,10 @@
+{
+  "manga": [
+    {
+      "name": "Chainsaw Man",
+      "totalChapters": "90",
+      "genres": [],
+      "linkToChapters": ["", "", ""]
+    }
+  ]
+}
