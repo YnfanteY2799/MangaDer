@@ -1,6 +1,3 @@
-export default function Search(){
-
-
-
-     return <>Buscar</>;
+export default function Search() {
+  <>Buscar</>;
 }
